@@ -21,7 +21,9 @@ let g:ale_sign_warning = '⚡︎'
 let g:ale_sign_error = '✖︎'
 let g:ale_sign_column_always = 1
 let g:airline#extensions#ale#enabled = 0
-
+let g:ale_set_highlights = 1
+highlight ALEError ctermbg=none cterm=underline
+highlight ALEWarning ctermbg=none cterm=underline
 " Pre neo-vim
 "let g:go_highlight_types = 1
 "syntax on
