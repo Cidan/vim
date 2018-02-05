@@ -6,6 +6,8 @@ Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'vim-airline/vim-airline', { 'tag': '*' }
 Plug 'kien/ctrlp.vim', { 'tag': '*' }
 Plug 'w0rp/ale', { 'tag': '*' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 call plug#end()
 
 " Keymap
@@ -24,6 +26,10 @@ let g:airline#extensions#ale#enabled = 0
 let g:ale_set_highlights = 1
 highlight ALEError ctermbg=none cterm=underline
 highlight ALEWarning ctermbg=none cterm=underline
+
+" Deoplete settings
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
 " Pre neo-vim
 "let g:go_highlight_types = 1
 "syntax on
