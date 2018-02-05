@@ -6,9 +6,15 @@ Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'vim-airline/vim-airline', { 'tag': '*' }
 Plug 'kien/ctrlp.vim', { 'tag': '*' }
 Plug 'w0rp/ale', { 'tag': '*' }
+Plug 'b4b4r07/vim-hcl', { 'tag': '*' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'tomasiser/vim-code-dark'
 call plug#end()
+
+" Color
+colorscheme codedark
+let g:airline_theme = 'codedark' 
 
 " Keymap
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
