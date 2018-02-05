@@ -10,6 +10,7 @@ Plug 'b4b4r07/vim-hcl', { 'tag': '*' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'tomasiser/vim-code-dark'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 " Color
@@ -36,6 +37,13 @@ highlight ALEWarning ctermbg=none cterm=underline
 " Deoplete settings
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
+let g:deoplete#auto_complete_delay = 250
+
+" NERDTree settings
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 " Pre neo-vim
 "let g:go_highlight_types = 1
 "syntax on
